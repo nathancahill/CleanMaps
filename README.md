@@ -2,7 +2,7 @@
 
 ### CleanMaps
 
-Google Maps are great, but since we’ve started using them as design features, they’ve been getting more and more cluttered. There’s a big "View on Google Maps" button that takes up [most of the map](http://i.imgur.com/ULltLdA.png) at smaller sizes, there’s a profile image if you’re signed in, along with the satellite toggle and zoom buttons. 
+Google Maps are great, but since we've started using them as design features, they've been getting more and more cluttered. There’s a big "View on Google Maps" button that takes up [most of the map](http://i.imgur.com/ULltLdA.png) at smaller sizes, there’s a profile image if you're signed in, along with the satellite toggle and zoom buttons. 
 
 __Before and After__
 
@@ -35,9 +35,9 @@ __How does it work?__
 
 CleanMaps wraps each ```<iframe>``` in two divs with a negative margin on top. This covers up the buttons, but keeps the map centered on the same location.
 
-Requires JQuery.
+Requires jQuery.
 
-__Don’t want the Javasciprt?__
+__Don't want the Javascript?__
 
 Just include the css file, add these wrappers around your ```<iframe>``` and set the appropriate heights.
 
