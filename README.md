@@ -14,7 +14,7 @@ CleanMaps automatically cleans up all the Google Maps ```<iframes>``` on a page.
 <link href="clean-maps.css" type="text/css" />
 <script src="clean-maps.js"></script>
 
-<iframe frameborder="0" scrolling="no" width="300" height="300" src="https://maps.google.com/..."></iframe>
+<iframe width="300" height="300" src="https://maps.google.com/..."></iframe>
 
 <script>
     $(document).ready(function() {
