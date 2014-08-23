@@ -37,7 +37,7 @@ Requires JQuery.
 
 __Don’t want the Javasciprt?__
 
-Add these wrappers around your ```<iframe>```
+Add these wrappers around your ```<iframe>``` and set the appropriate heights.
 
 ```
 <div class="clean-maps-outer" style="width: 300px; height: 300px;">
