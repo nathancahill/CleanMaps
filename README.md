@@ -34,3 +34,31 @@ __How does it work?__
 CleanMaps wraps each ```<iframe>``` in two divs with a negative margin on top. This covers up the buttons, but keeps the map centered on the same location.
 
 Requires JQuery.
+
+__Don’t want the Javasciprt?__
+
+Add these wrappers around your ```<iframe>```
+
+```
+<div class="clean-maps-outer" style="width: 300px; height: 300px;">
+    <div class="clean-maps-inner" style="height: (300 + offset); margin-top: -(offset / 2);">
+        <iframe src="https://maps.google.com/..."></iframe>
+    </div>
+</div>
+```
+
+Calculate the offset with this function:
+
+```
+function calculateOffset(height) {
+    var offset = 150;
+
+    if (height < 200) {
+        offset = 145;
+    } else if (height < 400) {
+        offset = 110;
+    }
+    
+    return offset;
+}
+```
