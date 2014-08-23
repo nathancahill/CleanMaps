@@ -1,3 +1,5 @@
+> __THIS VIOLATES GOOGLE MAPS ToS AND IS A PROOF OF CONCEPT ONLY__
+
 ### CleanMaps
 
 Google Maps are great, but since we’ve started using them as design features, they’ve been getting more and more cluttered. There’s a big "View on Google Maps" button that takes up [most of the map](http://i.imgur.com/ULltLdA.png) at smaller sizes, there’s a profile image if you’re signed in, along with the satellite toggle and zoom buttons. 
