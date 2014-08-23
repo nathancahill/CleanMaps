@@ -23,7 +23,7 @@ CleanMaps automatically cleans up all the Google Maps ```<iframes>``` on a page.
 </script>
 ```
 
-You can also disable map interaction (panning, zooming, scrolling) by passing ```true``` to the init function.
+You can also disable map interaction (panning, zooming, scrolling) by passing ```true``` to the init function. This adds a transparent ```<div>``` over the iframe.
 
 ```
 CleanMaps.init(true);
