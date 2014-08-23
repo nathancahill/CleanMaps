@@ -1,4 +1,32 @@
-CleanMaps
-=========
+### CleanMaps
 
-Cleaner Google Maps
+Google Maps are great, but since we’ve started using them as design features, they’ve been getting more and more cluttered. There’s a big "View on Google Maps" button that takes up [most of the map](http://i.imgur.com/ULltLdA.png) at smaller sizes, there’s a profile image if you’re signed in, along with the satellite toggle and zoom buttons. 
+
+![Before and After](http://i.imgur.com/IzlOkfo.jpg)
+
+__Usage__
+
+CleanMaps automatically cleans up all the Google Maps ```<iframes>``` on a page. Simply include the CSS and JS and call ```CleanMaps.init()```.
+
+```
+<link href="clean-maps.css" type="text/css" />
+<script src="clean-maps.js"></script>
+
+<script>
+    $(document).ready(function() {
+        CleanMaps.init();
+    });
+</script>
+```
+
+You can also disable map interaction (panning, zooming, scrolling) by passing ```true``` to the init function.
+
+```
+CleanMaps.init(true);
+```
+
+__How does it work?__
+
+CleanMaps wraps each ```<iframe>``` in two divs with a negative margin on top. This covers up the buttons, but keeps the map centered on the same location.
+
+Requires JQuery.
