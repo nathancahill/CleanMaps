@@ -39,17 +39,28 @@ Requires jQuery.
 
 __Don't want the Javascript?__
 
-Just include the css file, add these wrappers around your ```<iframe>``` and set the appropriate heights.
+Just include the css file, add these wrappers around your ```<iframe>``` and set the appropriate heights (don't set the height in the iframe). If your iframe was initially 300px tall:
 
 ```
-<div class="clean-maps-outer" style="width: 300px; height: 300px;">
+clean-maps-outer {
+	height: 300px;
+}
+
+clean-maps-inner {
+	height: 300px + offset;
+	margin-top: -(offset / 2);
+}
+```
+
+```
+<div class="clean-maps-outer" style="height: 300px">
     <div class="clean-maps-inner" style="height: (300 + offset); margin-top: -(offset / 2);">
         <iframe src="https://maps.google.com/..."></iframe>
     </div>
 </div>
 ```
 
-Calculate the offset with this function:
+Calculate ```offset``` with this function:
 
 ```
 function calculateOffset(height) {
@@ -63,4 +74,17 @@ function calculateOffset(height) {
     
     return offset;
 }
+
+calculateOffset(300);
+```
+
+To disable map interaction, add a second div with the ```clean-maps-cover``` class:
+
+```
+<div class="clean-maps-outer">
+	<div class="clean-maps-cover"></div>
+    <div class="clean-maps-inner">
+        <iframe src="https://maps.google.com/..."></iframe>
+    </div>
+</div>
 ```
